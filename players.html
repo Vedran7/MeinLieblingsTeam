@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="navbar.css" rel="stylesheet">
+    <link href="players.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,21 +20,36 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-static-top">
-      <div id="header">
+    <nav >
 
-      </div>
-      <div class="collapse navbar-collapse navbar-orange" id="bs-example-navbar-collapse-1">
+      <span id="site-header">
+
+      </span>
+
+      <span id="nav-buttons">
         <ul class="nav navbar-nav">
-          <li><a href="/players">Home</a></li>
-          <li><a href="/players">Add Player</a></li>
+          <li ><a href="#">Home</a></li>
+          <li><a href="#">Add Player</a></li>
           <li class="active"><a href="#">Players<span class="sr-only">(current)</span></a></li>
         </ul>
+      </span>
+
+      <div id="head">
+
       </div>
     </nav>
 
-    <div>
-      <table class="table" id="spieler-tabelle">
+    <div class="btn-group btn-group-justified" role="group" aria-label="..." id="auswahlBtns">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Alle Spieler</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Favoriten</button>
+      </div>
+    </div>
+
+    <div id="spieler-tabelle">
+      <table class="table">
         <thead>
           <tr>
             <th>Name</th>
