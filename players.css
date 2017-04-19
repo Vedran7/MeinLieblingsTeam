@@ -13,9 +13,9 @@
 }
 
 .table>tbody>tr:nth-child(odd)>td {
-    background-color: #EEEEEE;
+    background-color: #FAFAFA;
 }
 
 .table>tbody>tr:nth-child(even)>td {
-    background-color: #FAFAFA;
+    background-color: #F5F5F5;
 }
