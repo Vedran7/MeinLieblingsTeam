@@ -11,3 +11,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.table>tbody>tr:nth-child(odd)>td {
+    background-color: #EEEEEE;
+}
+
+.table>tbody>tr:nth-child(even)>td {
+    background-color: #FAFAFA;
+}
