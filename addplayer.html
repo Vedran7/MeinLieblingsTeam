@@ -36,10 +36,10 @@
 
     </nav>
 
-	<form class="form-horizontal">
+	<form class="form-horizontal" style="margin-top: 50px;">
 		<fieldset>
 
-		<legend align="center">Basketballspieler anlegen</legend>
+
 
 			<!-- INPUT Vorname -->
 			<div class= "form-group">
@@ -61,21 +61,25 @@
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="jahr">Geburtsjahr</label>
 					<div class="col-md-4">
-						<input id="jahr" name="jahr" type="date" placeholder="Testadawdwa" class="form-control input-md">
+						<input id="jahr" name="jahr" type="date" class="form-control input-md">
 				</div>
 			</div>
 
 			<!-- INPUT Aktiv -->
-			<div class="form-group">
-			  <label class="col-md-4 control-label" for="aktiv">Aktiver Sportler?</label>
-			  <div class="col-md-4">
-				<label class="checkbox-inline" for="checkboxes-0" style="margin-right : 0px">
-				  <input id="checkboxes-0" name="checkboxes" type="checkbox" value="1" >Ja</label>
-
-				<label class="checkbox-inline" for="checkboxes-1">
-				  <input id="checkboxes-1" name="checkboxes" type="checkbox" value="0">Nein</label>
-			  </div>
-			</div>
+      <!-- Multiple Radios (inline) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="radios">Aktiver Sportler?</label>
+        <div class="col-md-4">
+          <label class="radio-inline" for="radios-0">
+            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+            Ja
+          </label>
+          <label class="radio-inline" for="radios-1">
+            <input type="radio" name="radios" id="radios-1" value="2">
+            Nein
+          </label>
+        </div>
+      </div>
 
 			<!-- INPUT Position -->
 			<div class="form-group">
@@ -119,7 +123,7 @@
 			<div class= "form-group">
 				<label class="col-md-4 control-label" for="number">Rückennummer</label>
 					<div class="col-md-4">
-						<input id="number" name="number" type="number" placeholder="Beispiel: 11" class="form-control input-md">
+						<input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md">
 					</div>
 			</div>
 
