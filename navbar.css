@@ -1,19 +1,15 @@
 #head {
-  height: 450px;
+  height: 400px;
   width: 100%;
   background: url(https://images7.alphacoders.com/363/363760.jpg);
   background-size: cover;
 }
 
-#site-header {
-  background: rgba(230, 126, 34, 0.8);
+#color-overlay {
+  background: rgba(230, 126, 34, 0.95);
   z-index: 2;
   width: 100%;
   height: 100%;
-}
-
-.navbar-nav {
-  color: #fff !important;
 }
 
 #nav-buttons {
@@ -21,43 +17,43 @@
   margin: 20px;
 }
 
+ul.nav-buttons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: inline;
+}
+
+li {
+    float: right;
+}
+
+a.active {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.2);
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+a.link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+a.link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
 a {
   color: inherit;
-}
-
-
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus {
-  color: #fff;
-}
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover,
-.navbar-nav > .active > a:focus {
-  color: #fff;
-  background-color: rgba(255,255,255,0.3);
-}
-.navbar-nav > .open > a,
-.navbar-nav > .open > a:hover,
-.navbar-nav > .open > a:focus {
-  color: #fff;
-  background-color: rgba(255,255,255,0.3);
-}
-
-
-
-
-@media (max-width: 767px) {
-  .navbar-nav > li > a {
-    color: rgba(255,255,255,0.1);
-  }
-  .navbar-nav > li > a:hover,
-  .navbar-nav > li > a:focus {
-    color: rgba(255,255,255,0.1);
-  }
-  .navbar-nav .open  > a,
-  .navbar-nav .open  > a:hover,
-  .navbar-nav .open  > a:focus {
-    color: #fff;
-    background-color: rgba(255,255,255,0.1);
-  }
 }
