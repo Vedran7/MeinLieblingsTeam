@@ -1,161 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Add Player</title>
+<html lang="de">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="navbar.css" rel="stylesheet">
-    <link href="addplayer.css" rel="stylesheet">
+<head>
+  <!-- IMPORT META INFORMATION -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Basketball Player Database">
+  <meta name="keywords" content="Basketball, Basketball Player">
+  <meta name="author" content="MeinLieblingsTeam">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <nav id="head">
+  <!-- TITLE -->
+  <title>BPD - ADD PLAYER</title>
 
-      <ul class="nav-buttons">
-        <li><a class="link" href="players.html">PLAYERS</a></li>
-        <li><a class="active" href="#">ADD PLAYER</a></li>
-        <li><a class="link" href="home.html">HOME</a></li>
-      </ul>
+  <!-- IMPORT CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/addplayer.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/path/to/favicon.ico">
+</head>
 
-      <div id="color-overlay">
-        <h1 id="titel">Mein Lieblingsteam</h1>
+<body>
+  <nav id="head">
+    <ul class="nav-buttons">
+      <li><a class="link" href="players.html">PLAYERS</a></li>
+      <li><a class="active" href="#">ADD PLAYER</a></li>
+      <li><a class="link" href="home.html">HOME</a></li>
+    </ul>
 
+    <div id="color-overlay">
+      <h1 id="titel">Mein Lieblingsteam</h1>
+    </div>
+  </nav>
 
-      </div>
+  <!-- CONTAINER -->
+  <div id="footerbreite">
+    <form class="form-horizontal" style="margin-top: 50px;">
+      <fieldset>
 
-
-    </nav>
-<div id= "footerbreite">
-	<form class="form-horizontal" style="margin-top: 50px;">
-		<fieldset>
-
-
-
-			<!-- INPUT Vorname -->
-			<div class= "form-group">
-				<label class="col-md-4 control-label" for="vorname">Vorname</label>
-				<div class="col-md-4">
-					<input id="vorname" name="vorname" type="text" placeholder="Beispiel: Max" class="form-control input-md" required="">
-				</div>
-			</div>
-
-			<!-- INPUT Nachname -->
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="name">Nachname</label>
-					<div class="col-md-4">
-						<input id="name" name="name" type="text" placeholder="Beispiel: Mustermann" class="form-control input-md" required="">
-				</div>
-			</div>
-
-			<!-- INPUT Geburtsjahr -->
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="jahr">Geburtsjahr</label>
-					<div class="col-md-4">
-						<input id="jahr" name="jahr" type="date" class="form-control input-md">
-				</div>
-			</div>
-
-			<!-- INPUT Aktiv -->
-      <!-- Multiple Radios (inline) -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="radios">Aktiver Sportler?</label>
-        <div class="col-md-4">
-          <label class="radio-inline" for="radios-0">
-            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-            Ja
-          </label>
-          <label class="radio-inline" for="radios-1">
-            <input type="radio" name="radios" id="radios-1" value="2">
-            Nein
-          </label>
+        <!-- INPUT Vorname -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="vorname">Vorname</label>
+          <div class="col-md-4">
+            <input id="vorname" name="vorname" type="text" placeholder="Beispiel: Max" class="form-control input-md" required="">
+          </div>
         </div>
-      </div>
 
-			<!-- INPUT Position -->
-			<div class="form-group">
-			  <label class="col-md-4 control-label" for="position">Position</label>
-			  <div class="col-md-4">
-				<select id="position" name="position" class="form-control">
-				  <option value="1">Wing</option>
-				  <option value="2">Center</option>
-				  <option value="3">Guard</option>
-				  <option value="4">Power Forward</option>
-				  <option value="5">Small Forward</option>
-				</select>
-			  </div>
-			</div>
+        <!-- INPUT Nachname -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="name">Nachname</label>
+          <div class="col-md-4">
+            <input id="name" name="name" type="text" placeholder="Beispiel: Mustermann" class="form-control input-md" required="">
+          </div>
+        </div>
 
-			<!-- INPUT Verein -->
-			<div class= "form-group">
-				<label class="col-md-4 control-label" for="verein">Verein</label>
-					<div class="col-md-4">
-						<input id="verein" name="verein" type="text" placeholder="Beispiel: MLT" class="form-control input-md">
-					</div>
-			</div>
+        <!-- INPUT Geburtsjahr -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="jahr">Geburtsjahr</label>
+          <div class="col-md-4">
+            <input id="jahr" name="jahr" type="date" class="form-control input-md">
+          </div>
+        </div>
 
-			<!-- INPUT Headcoach -->
-			<div class= "form-group">
-				<label class="col-md-4 control-label" for="hcoach">Headcoach</label>
-					<div class="col-md-4">
-						<input id="hcoach" name="hcoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
-					</div>
-			</div>
+        <!-- INPUT Aktiv -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="radios">Aktiver Sportler?</label>
+          <div class="col-md-4">
+            <label class="radio-inline" for="radios-0">
+            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">Ja</label>
+            <label class="radio-inline" for="radios-1">
+            <input type="radio" name="radios" id="radios-1" value="2">Nein</label>
+          </div>
+        </div>
 
-			<!-- INPUT Assistant Coach -->
-			<div class= "form-group">
-				<label class="col-md-4 control-label" for="acoach">Assistant Coach</label>
-					<div class="col-md-4">
-						<input id="acoach" name="acoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
-					</div>
-			</div>
+        <!-- INPUT Position -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="position">Position</label>
+          <div class="col-md-4">
+            <select id="position" name="position" class="form-control">
+    				  <option value="1">Wing</option>
+    				  <option value="2">Center</option>
+    				  <option value="3">Guard</option>
+    				  <option value="4">Power Forward</option>
+    				  <option value="5">Small Forward</option>
+  				  </select>
+          </div>
+        </div>
 
-			<!-- INPUT Rückennummer -->
-			<div class= "form-group">
-				<label class="col-md-4 control-label" for="number">Rückennummer</label>
-					<div class="col-md-4">
-						<input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md">
-					</div>
-			</div>
+        <!-- INPUT Verein -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="verein">Verein</label>
+          <div class="col-md-4">
+            <input id="verein" name="verein" type="text" placeholder="Beispiel: MLT" class="form-control input-md">
+          </div>
+        </div>
 
-			<!-- INPUT Favorit -->
-			<div class="form-group">
-			  <label class="col-md-4 control-label" for="favorit">Als Favorit markieren?</label>
-				<div class="col-md-4">
-					<label class="checkbox-inline" for="favorit-0">
-					<input type="checkbox" name="favorit" id="favorit-0" value="1">Ja
-					</label>
-				</div>
-			</div>
+        <!-- INPUT Headcoach -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="hcoach">Headcoach</label>
+          <div class="col-md-4">
+            <input id="hcoach" name="hcoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
+          </div>
+        </div>
 
-			<!-- Button -->
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="confirmation"></label>
-				<div class="col-md-4">
-					<button id="confirmation" name="confirmation" class="btn btn-warning btn-block" onclick="location.href = 'http://kittey.rockz:1111/api/V1/addPlayer';">Spieler erstellen</button>
-				</div>
-			</div>
+        <!-- INPUT Assistant Coach -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="acoach">Assistant Coach</label>
+          <div class="col-md-4">
+            <input id="acoach" name="acoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
+          </div>
+        </div>
 
-		</fieldset>
-	</form>
-</div>
+        <!-- INPUT Rückennummer -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="number">Rückennummer</label>
+          <div class="col-md-4">
+            <input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md">
+          </div>
+        </div>
 
-<div id="footerbreite">
-  <!-- FOOTER -->
-  <footer>
-    <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2017 Mein Lieblingsteam &middot; <a href="http://s.quickmeme.com/img/a8/a8022006b463b5ed9be5a62f1bdbac43b4f3dbd5c6b3bb44707fe5f5e26635b0.jpg">Privacy</a> &middot; <a href="https://www.youtube.com/watch?v=GICX3XiYURY">Terms</a></p>
-  </footer>
-  </div><!-- /.container -->
-  </body>
+        <!-- INPUT Favorit -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="favorit">Als Favorit markieren?</label>
+          <div class="col-md-4">
+            <label class="checkbox-inline" for="favorit-0"><input type="checkbox" name="favorit" id="favorit-0" value="1">Ja</label>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="confirmation"></label>
+          <div class="col-md-4">
+            <button id="confirmation" name="confirmation" class="btn btn-warning btn-block" onclick="location.href = 'http://kittey.rockz:1111/api/V1/addPlayer';">Spieler erstellen</button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="footerbreite">
+    <!-- FOOTER -->
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2017 Mein Lieblingsteam &middot; <a href="http://s.quickmeme.com/img/a8/a8022006b463b5ed9be5a62f1bdbac43b4f3dbd5c6b3bb44707fe5f5e26635b0.jpg">Privacy</a> &middot; <a href="https://www.youtube.com/watch?v=GICX3XiYURY">Terms</a></p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+  </script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="../../assets/js/vendor/holder.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
 </html>
