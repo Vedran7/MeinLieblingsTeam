@@ -59,7 +59,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="jahr">Geburtsjahr</label>
           <div class="col-md-4 input-group input-group-md">
-            <input id="jahr" name="jahr" type="date" class="form-control input-md">
+            <input id="jahr" name="jahr" type="number" class="form-control input-md" min="0" max="2015">
             <span class="input-group-addon" id="jahrOutput">&#10006;</span>
           </div>
         </div>
@@ -121,7 +121,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="number">Rückennummer</label>
           <div class="col-md-4 input-group input-group-md">
-            <input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md">
+            <input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md" min="4" max="15">
             <span class="input-group-addon" id="numberOutput">&#10006;</span>
           </div>
         </div>
@@ -138,7 +138,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="confirmation"></label>
           <div class="col-md-4">
-            <button id="confirmation" name="confirmation" class="btn btn-warning btn-block" onclick="location.href = 'http://kittey.rockz:1111/api/V1/addPlayer';">Spieler erstellen</button>
+            <button id="confirmation" name="confirmation" class="btn btn-warning btn-block" onclick="validateForm()">Spieler erstellen</button>
           </div>
         </div>
 

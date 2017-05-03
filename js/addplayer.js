@@ -8,98 +8,59 @@ var numberCorrect = false;
 
 
 $('#vorname').bind('input propertychange',
-function() {
-var vorname = document.getElementById('vorname').value
+  function() {
+    var vorname = document.getElementById('vorname').value;
     if (vorname.length > 3) {
       document.getElementById('vornameOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
-    }else{
+    } else {
       document.getElementById('vornameOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
-
-});
+  }
+);
 
 $('#name').bind('input propertychange',
-function() {
-var vorname = document.getElementById('name').value
-    if (vorname.length > 3) {
+  function() {
+    var name = document.getElementById('name').value;
+    if (name.length > 3) {
       document.getElementById('nameOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    }else{
+      nameCorrect = true;
+    } else {
       document.getElementById('nameOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
+      nameCorrect = false;
     }
-
-});
+  }
+);
 
 $('#jahr').bind('input propertychange',
-function() {
-var vorname = document.getElementById('jahr').value
-    if (vorname.length > 3) {
+  function() {
+    var jahr = document.getElementById('jahr').value;
+    if (jahr.length == 4 && jahr <= 2015 && jahr > 0) {
       document.getElementById('jahrOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    }else{
+      jahrCorrect = true;
+    } else {
       document.getElementById('jahrOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
+      jahrCorrect = false;
     }
-
-});
-
-$('#verein').bind('input propertychange',
-function() {
-var vorname = document.getElementById('verein').value
-    if (vorname.length > 3) {
-      document.getElementById('vereinOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    }else{
-      document.getElementById('vereinOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
-    }
-
-});
-
-$('#hcoach').bind('input propertychange',
-function() {
-var vorname = document.getElementById('hcoach').value
-    if (vorname.length > 3) {
-      document.getElementById('hcoachOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    }else{
-      document.getElementById('hcoachOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
-    }
-
-});
-
-$('#acoach').bind('input propertychange',
-function() {
-var vorname = document.getElementById('acoach').value
-    if (vorname.length > 3) {
-      document.getElementById('acoachOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    }else{
-      document.getElementById('acoachOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
-    }
-
-});
+  }
+);
 
 $('#number').bind('input propertychange',
-function() {
-var vorname = document.getElementById('number').value
-    if (vorname.length > 3) {
+  function() {
+    var number = document.getElementById('number').value;
+    if (number.length <= 2 && number >= 4 && number <= 15) {
       document.getElementById('numberOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    }else{
+      numberCorrect = true;
+    } else {
       document.getElementById('numberOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
+      numberCorrect = false;
     }
+  }
+);
 
-});
-
-function senden(){
-  if (vornameCorrect) {
-
+function validateForm() {
+  if (vornameCorrect && nameCorrect && jahrCorrect && vereinCorrect && hcoachCorrect && acoachCorrect && numberCorrect) {
+    alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
   }
 }
