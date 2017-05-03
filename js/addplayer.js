@@ -6,7 +6,9 @@ var hcoachCorrect = false;
 var acoachCorrect = false;
 var numberCorrect = false;
 
+var buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÖÜßäöüß"
 
+<<<<<<< HEAD
 $('#vorname').bind('input propertychange',
   function() {
     var vorname = document.getElementById('vorname').value;
@@ -32,6 +34,40 @@ $('#name').bind('input propertychange',
     }
   }
 );
+=======
+function buchstabenPruefen(input){
+  for (var i=0;i<input.length;i++) {
+    if (buchstaben.indexOf(input.charAt(i))<0) {
+        return false;
+    }
+  }
+  return true;
+}
+
+$('#vorname').bind('input propertychange',
+function() {
+  var vorname = document.getElementById('vorname').value
+  if (vorname.length > 0 && buchstabenPruefen(vorname)) {
+    document.getElementById('vornameOutput').innerHTML = "&#10004;"
+    vornameCorrect = true;
+  }else {
+    document.getElementById('vornameOutput').innerHTML = "&#10006;"
+    vornameCorrect = false;
+  }
+});
+
+$('#name').bind('input propertychange',
+function() {
+  var vorname = document.getElementById('name').value
+  if (vorname.length > 0 && buchstabenPruefen(vorname)) {
+    document.getElementById('nameOutput').innerHTML = "&#10004;"
+    vornameCorrect = true;
+  }else {
+    document.getElementById('nameOutput').innerHTML = "&#10006;"
+    vornameCorrect = false;
+  }
+});
+>>>>>>> origin/master
 
 $('#jahr').bind('input propertychange',
   function() {
@@ -41,10 +77,53 @@ $('#jahr').bind('input propertychange',
       jahrCorrect = true;
     } else {
       document.getElementById('jahrOutput').innerHTML = "&#10006;"
+<<<<<<< HEAD
       jahrCorrect = false;
     }
   }
 );
+=======
+      vornameCorrect = false;
+    }
+
+});
+
+$('#verein').bind('input propertychange',
+function() {
+  var vorname = document.getElementById('verein').value
+  if (vorname.length > 0 && buchstabenPruefen(vorname)) {
+    document.getElementById('vereinOutput').innerHTML = "&#10004;"
+    vornameCorrect = true;
+  }else {
+    document.getElementById('vereinOutput').innerHTML = "&#10006;"
+    vornameCorrect = false;
+  }
+});
+
+$('#hcoach').bind('input propertychange',
+function() {
+  var vorname = document.getElementById('hcoach').value
+  if (vorname.length > 0 && buchstabenPruefen(vorname)) {
+    document.getElementById('hcoachOutput').innerHTML = "&#10004;"
+    vornameCorrect = true;
+  }else {
+    document.getElementById('hcoachOutput').innerHTML = "&#10006;"
+    vornameCorrect = false;
+  }
+});
+
+$('#acoach').bind('input propertychange',
+function() {
+  var vorname = document.getElementById('acoach').value
+  if (vorname.length > 0 && buchstabenPruefen(vorname)) {
+    document.getElementById('acoachOutput').innerHTML = "&#10004;"
+    vornameCorrect = true;
+  }else {
+    document.getElementById('acoachOutput').innerHTML = "&#10006;"
+    vornameCorrect = false;
+  }
+});
+>>>>>>> origin/master
 
 $('#number').bind('input propertychange',
   function() {
