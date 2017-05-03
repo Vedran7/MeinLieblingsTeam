@@ -8,33 +8,6 @@ var numberCorrect = false;
 
 var buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÖÜßäöüß"
 
-<<<<<<< HEAD
-$('#vorname').bind('input propertychange',
-  function() {
-    var vorname = document.getElementById('vorname').value;
-    if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    } else {
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
-    }
-  }
-);
-
-$('#name').bind('input propertychange',
-  function() {
-    var name = document.getElementById('name').value;
-    if (name.length > 3) {
-      document.getElementById('nameOutput').innerHTML = "&#10004;"
-      nameCorrect = true;
-    } else {
-      document.getElementById('nameOutput').innerHTML = "&#10006;"
-      nameCorrect = false;
-    }
-  }
-);
-=======
 function buchstabenPruefen(input){
   for (var i=0;i<input.length;i++) {
     if (buchstaben.indexOf(input.charAt(i))<0) {
@@ -61,13 +34,12 @@ function() {
   var vorname = document.getElementById('name').value
   if (vorname.length > 0 && buchstabenPruefen(vorname)) {
     document.getElementById('nameOutput').innerHTML = "&#10004;"
-    vornameCorrect = true;
+    nameCorrect = true;
   }else {
     document.getElementById('nameOutput').innerHTML = "&#10006;"
-    vornameCorrect = false;
+    nameCorrect = false;
   }
 });
->>>>>>> origin/master
 
 $('#jahr').bind('input propertychange',
   function() {
@@ -77,26 +49,19 @@ $('#jahr').bind('input propertychange',
       jahrCorrect = true;
     } else {
       document.getElementById('jahrOutput').innerHTML = "&#10006;"
-<<<<<<< HEAD
       jahrCorrect = false;
     }
-  }
-);
-=======
-      vornameCorrect = false;
-    }
-
-});
+  });
 
 $('#verein').bind('input propertychange',
 function() {
   var vorname = document.getElementById('verein').value
   if (vorname.length > 0 && buchstabenPruefen(vorname)) {
     document.getElementById('vereinOutput').innerHTML = "&#10004;"
-    vornameCorrect = true;
+    vereinCorrect = true;
   }else {
     document.getElementById('vereinOutput').innerHTML = "&#10006;"
-    vornameCorrect = false;
+    vereinCorrect = false;
   }
 });
 
@@ -105,10 +70,10 @@ function() {
   var vorname = document.getElementById('hcoach').value
   if (vorname.length > 0 && buchstabenPruefen(vorname)) {
     document.getElementById('hcoachOutput').innerHTML = "&#10004;"
-    vornameCorrect = true;
+    hcoachCorrect = true;
   }else {
     document.getElementById('hcoachOutput').innerHTML = "&#10006;"
-    vornameCorrect = false;
+    hcoachCorrect = false;
   }
 });
 
@@ -117,13 +82,12 @@ function() {
   var vorname = document.getElementById('acoach').value
   if (vorname.length > 0 && buchstabenPruefen(vorname)) {
     document.getElementById('acoachOutput').innerHTML = "&#10004;"
-    vornameCorrect = true;
+    acoachCorrect = true;
   }else {
     document.getElementById('acoachOutput').innerHTML = "&#10006;"
-    vornameCorrect = false;
+    acoachCorrect = false;
   }
 });
->>>>>>> origin/master
 
 $('#number').bind('input propertychange',
   function() {
@@ -140,6 +104,30 @@ $('#number').bind('input propertychange',
 
 function validateForm() {
   if (vornameCorrect && nameCorrect && jahrCorrect && vereinCorrect && hcoachCorrect && acoachCorrect && numberCorrect) {
+    var vorname = document.getElementById('vorname').value
+    var name = document.getElementById('name').value
+    var jahr = document.getElementById('jahr').value;
+    var verein = document.getElementById('verein').value
+    var hcoach = document.getElementById('hcoach').value
+    var acoach = document.getElementById('acoach').value
+    var number = document.getElementById('number').value;
+
+    var formData = new FormData();
+
+  	formData.append('vorname', vorname);
+  	formData.append('name', name);
+    formData.append('jahr', jahr);
+    formData.append('verein', verein);
+    formData.append('hcoach', hcoach);
+    formData.append('acoach', acoach);
+    formData.append('number', number);
+
+  	var xhr = new XMLHttpRequest();
+  	xhr.open('POST', 'http://188.166.165.74:13337/api/players', true);
+  	xhr.onload = function(e) { ... };
+
+  	xhr.send(formData);
+  }else {
     alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
   }
 }
