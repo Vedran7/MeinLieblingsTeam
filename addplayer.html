@@ -49,16 +49,18 @@
         <!-- INPUT Nachname -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="name">Nachname</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <input id="name" name="name" type="text" placeholder="Beispiel: Mustermann" class="form-control input-md" required="">
+            <span class="input-group-addon" id="nameOutput">&#10006;</span>
           </div>
         </div>
 
         <!-- INPUT Geburtsjahr -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="jahr">Geburtsjahr</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <input id="jahr" name="jahr" type="date" class="form-control input-md">
+            <span class="input-group-addon" id="jahrOutput">&#10006;</span>
           </div>
         </div>
 
@@ -76,7 +78,7 @@
         <!-- INPUT Position -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="position">Position</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <select id="position" name="position" class="form-control">
     				  <option value="1">Wing</option>
     				  <option value="2">Center</option>
@@ -84,38 +86,43 @@
     				  <option value="4">Power Forward</option>
     				  <option value="5">Small Forward</option>
   				  </select>
+            <span class="input-group-addon" id="jahrOutput">&#10006;</span>
           </div>
         </div>
 
         <!-- INPUT Verein -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="verein">Verein</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <input id="verein" name="verein" type="text" placeholder="Beispiel: MLT" class="form-control input-md">
+            <span class="input-group-addon" id="vereinOutput">&#10006;</span>
           </div>
         </div>
 
         <!-- INPUT Headcoach -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="hcoach">Headcoach</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <input id="hcoach" name="hcoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
+            <span class="input-group-addon" id="hcoachOutput">&#10006;</span>
           </div>
         </div>
 
         <!-- INPUT Assistant Coach -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="acoach">Assistant Coach</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <input id="acoach" name="acoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
+            <span class="input-group-addon" id="acoachOutput">&#10006;</span>
           </div>
         </div>
 
         <!-- INPUT Rückennummer -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="number">Rückennummer</label>
-          <div class="col-md-4">
+          <div class="col-md-4 input-group input-group-md">
             <input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md">
+            <span class="input-group-addon" id="numberOutput">&#10006;</span>
           </div>
         </div>
 
@@ -155,10 +162,6 @@
     window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
   </script>
   <script src="../../dist/js/bootstrap.min.js"></script>
-  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-  <script src="../../assets/js/vendor/holder.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
   <script src="js/addplayer.js"></script>
 </body>
