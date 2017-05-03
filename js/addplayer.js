@@ -5,12 +5,8 @@ var vereinCorrect = false;
 var hcoachCorrect = false;
 var acoachCorrect = false;
 var numberCorrect = false;
-<<<<<<< HEAD
 
 var buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÖÜßäöüß";
-=======
-var buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÄÖÜßäöüß"
->>>>>>> origin/master
 
 function buchstabenPruefen(input) {
   for (var i = 0; i < input.length; i++) {
@@ -22,7 +18,6 @@ function buchstabenPruefen(input) {
 }
 
 $('#vorname').bind('input propertychange',
-<<<<<<< HEAD
 function() {
   var vorname = document.getElementById('vorname').value;
   if (vorname.length > 0 && buchstabenPruefen(vorname)) {
@@ -45,30 +40,6 @@ function() {
     nameCorrect = false;
   }
 });
-=======
-  function() {
-    var vorname = document.getElementById('vorname').value
-    if (vorname.length > 0 && buchstabenPruefen(vorname)) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
-      vornameCorrect = true;
-    } else {
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
-      vornameCorrect = false;
-    }
-  });
-
-$('#name').bind('input propertychange',
-  function() {
-    var name = document.getElementById('name').value
-    if (name.length > 0 && buchstabenPruefen(name)) {
-      document.getElementById('nameOutput').innerHTML = "&#10004;"
-      nameCorrect = true;
-    } else {
-      document.getElementById('nameOutput').innerHTML = "&#10006;"
-      nameCorrect = false;
-    }
-  });
->>>>>>> origin/master
 
 $('#jahr').bind('input propertychange',
   function() {
@@ -83,7 +54,6 @@ $('#jahr').bind('input propertychange',
   });
 
 $('#verein').bind('input propertychange',
-<<<<<<< HEAD
 function() {
   var verein = document.getElementById('verein').value;
   if (verein.length > 0 && buchstabenPruefen(verein)) {
@@ -110,7 +80,7 @@ function() {
 $('#acoach').bind('input propertychange',
 function() {
   var acoach = document.getElementById('acoach').value;
-  if (vorname.acoach > 0 && buchstabenPruefen(acoach)) {
+  if (acoach.length > 0 && buchstabenPruefen(acoach)) {
     document.getElementById('acoachOutput').innerHTML = "&#10004;"
     acoachCorrect = true;
   }else {
@@ -118,42 +88,6 @@ function() {
     acoachCorrect = false;
   }
 });
-=======
-  function() {
-    var verein = document.getElementById('verein').value
-    if (verein.length > 0 && buchstabenPruefen(verein)) {
-      document.getElementById('vereinOutput').innerHTML = "&#10004;"
-      vereinCorrect = true;
-    } else {
-      document.getElementById('vereinOutput').innerHTML = "&#10006;"
-      vereinCorrect = false;
-    }
-  });
-
-$('#hcoach').bind('input propertychange',
-  function() {
-    var hcoach = document.getElementById('hcoach').value
-    if (hcoach.length > 0 && buchstabenPruefen(vorname)) {
-      document.getElementById('hcoachOutput').innerHTML = "&#10004;"
-      hcoachCorrect = true;
-    } else {
-      document.getElementById('hcoachOutput').innerHTML = "&#10006;"
-      hcoachCorrect = false;
-    }
-  });
-
-$('#acoach').bind('input propertychange',
-  function() {
-    var acoach = document.getElementById('acoach').value
-    if (acoach.length > 0 && buchstabenPruefen(acoach)) {
-      document.getElementById('acoachOutput').innerHTML = "&#10004;"
-      acoachCorrect = true;
-    } else {
-      document.getElementById('acoachOutput').innerHTML = "&#10006;"
-      acoachCorrect = false;
-    }
-  });
->>>>>>> origin/master
 
 $('#number').bind('input propertychange',
   function() {
