@@ -20,80 +20,86 @@ var vorname = document.getElementById('vorname').value
 
 });
 
-$('#vorname').bind('input propertychange',
+$('#name').bind('input propertychange',
 function() {
-var vorname = document.getElementById('vorname').value
+var vorname = document.getElementById('name').value
     if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
+      document.getElementById('nameOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
     }else{
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
+      document.getElementById('nameOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
 
 });
 
-$('#vorname').bind('input propertychange',
+$('#jahr').bind('input propertychange',
 function() {
-var vorname = document.getElementById('vorname').value
+var vorname = document.getElementById('jahr').value
     if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
+      document.getElementById('jahrOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
     }else{
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
+      document.getElementById('jahrOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
 
 });
 
-$('#vorname').bind('input propertychange',
+$('#verein').bind('input propertychange',
 function() {
-var vorname = document.getElementById('vorname').value
+var vorname = document.getElementById('verein').value
     if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
+      document.getElementById('vereinOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
     }else{
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
+      document.getElementById('vereinOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
 
 });
 
-$('#vorname').bind('input propertychange',
+$('#hcoach').bind('input propertychange',
 function() {
-var vorname = document.getElementById('vorname').value
+var vorname = document.getElementById('hcoach').value
     if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
+      document.getElementById('hcoachOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
     }else{
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
+      document.getElementById('hcoachOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
 
 });
 
-$('#vorname').bind('input propertychange',
+$('#acoach').bind('input propertychange',
 function() {
-var vorname = document.getElementById('vorname').value
+var vorname = document.getElementById('acoach').value
     if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
+      document.getElementById('acoachOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
     }else{
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
+      document.getElementById('acoachOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
 
 });
 
-$('#vorname').bind('input propertychange',
+$('#number').bind('input propertychange',
 function() {
-var vorname = document.getElementById('vorname').value
+var vorname = document.getElementById('number').value
     if (vorname.length > 3) {
-      document.getElementById('vornameOutput').innerHTML = "&#10004;"
+      document.getElementById('numberOutput').innerHTML = "&#10004;"
       vornameCorrect = true;
     }else{
-      document.getElementById('vornameOutput').innerHTML = "&#10006;"
+      document.getElementById('numberOutput').innerHTML = "&#10006;"
       vornameCorrect = false;
     }
 
 });
+
+function senden(){
+  if (vornameCorrect) {
+
+  }
+}
