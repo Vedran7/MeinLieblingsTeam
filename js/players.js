@@ -1,11 +1,28 @@
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', ' http://188.166.165.74:13337/api/players');
-xhr.responseType = 'json';
-xhr.addEventListener("readystatechange", processRequest, false);
-xhr.send();
+loadAllPlayers();
 
-function processRequest(e) {
+function loadAllPlayers(){
+  document.getElementById('spieler-tabelle').innerHTML = "<table class='table'><thead><tr><th>Name</th><th>Verein</th><th>Coach</th><th>Position</th><th>Nummer</th><th>Jahr</th></tr></thead></table>";
+  document.getElementById("allPlayers").className = "btn btn-default active";
+  document.getElementById("favPlayers").className = "btn btn-default";
+  xhr.open('GET', ' http://188.166.165.74:13337/api/players');
+  xhr.responseType = 'json';
+  xhr.addEventListener("readystatechange", processRequest, false);
+  xhr.send();
+}
+
+function loadFavouritePlayers(){
+  document.getElementById('spieler-tabelle').innerHTML = "<table class='table'><thead><tr><th>Name</th><th>Verein</th><th>Coach</th><th>Position</th><th>Nummer</th><th>Jahr</th></tr></thead></table>";
+  document.getElementById("allPlayers").className = "btn btn-default";
+  document.getElementById("favPlayers").className = "btn btn-default active";
+  xhr.open('GET', ' http://188.166.165.74:13337/api/players?favorites=true');
+  xhr.responseType = 'json';
+  xhr.addEventListener("readystatechange", processRequest, false);
+  xhr.send();
+}
+
+function processRequest() {
   if (xhr.readyState == 4 && xhr.status == 200) {
     var data = xhr.response;
 
