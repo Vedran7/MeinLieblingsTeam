@@ -27,6 +27,7 @@ function() {
     document.getElementById('vornameOutput').innerHTML = "&#10006;"
     vornameCorrect = false;
   }
+  checkAll();
 });
 
 $('#name').bind('input propertychange',
@@ -39,6 +40,7 @@ function() {
     document.getElementById('nameOutput').innerHTML = "&#10006;"
     nameCorrect = false;
   }
+  checkAll();
 });
 
 $('#jahr').bind('input propertychange',
@@ -51,6 +53,7 @@ $('#jahr').bind('input propertychange',
       document.getElementById('jahrOutput').innerHTML = "&#10006;"
       jahrCorrect = false;
     }
+    checkAll();
   });
 
 $('#verein').bind('input propertychange',
@@ -63,6 +66,7 @@ function() {
     document.getElementById('vereinOutput').innerHTML = "&#10006;"
     vereinCorrect = false;
   }
+  checkAll();
 });
 
 $('#hcoach').bind('input propertychange',
@@ -75,6 +79,7 @@ function() {
     document.getElementById('hcoachOutput').innerHTML = "&#10006;"
     hcoachCorrect = false;
   }
+  checkAll();
 });
 
 $('#acoach').bind('input propertychange',
@@ -87,6 +92,7 @@ function() {
     document.getElementById('acoachOutput').innerHTML = "&#10006;"
     acoachCorrect = false;
   }
+  checkAll();
 });
 
 $('#number').bind('input propertychange',
@@ -99,7 +105,16 @@ $('#number').bind('input propertychange',
       document.getElementById('numberOutput').innerHTML = "&#10006;"
       numberCorrect = false;
     }
+    checkAll();
   });
+
+  function checkAll(){
+    if (vornameCorrect && nameCorrect && jahrCorrect && vereinCorrect && hcoachCorrect && acoachCorrect && numberCorrect) {
+      document.getElementById("confirmation").className = "btn btn-warning btn-block";
+    }else {
+      document.getElementById("confirmation").className = "btn btn-default btn-block disabled";
+    }
+  }
 
 /*
 function validateForm() {
