@@ -116,7 +116,7 @@ $('#number').bind('input propertychange',
     }
   }
 
-/*
+
 function validateForm() {
   if (vornameCorrect && nameCorrect && jahrCorrect && vereinCorrect && hcoachCorrect && acoachCorrect && numberCorrect) {
     var vorname = document.getElementById('vorname').value
@@ -139,7 +139,9 @@ function validateForm() {
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://188.166.165.74:13337/api/players', true);
-    xhr.onload = function(e) { ...
+    xhr.onload = function(e) {
+
+
     };
 
     xhr.send(formData);
@@ -147,4 +149,3 @@ function validateForm() {
     alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
   }
 }
-*/
