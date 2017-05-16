@@ -51,7 +51,5 @@ function processRequest() {
 
         document.getElementById('spieler-tabelle').innerHTML = html;
     }
-  }else {
-    console.log(xhr.readyState);
   }
 }

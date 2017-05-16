@@ -2,17 +2,14 @@
 <html lang="de">
 
 <head>
-  <!-- IMPORT META INFORMATION -->
   <meta charset="UTF-8">
   <meta name="description" content="Basketball Player Database">
   <meta name="keywords" content="Basketball, Basketball Player">
   <meta name="author" content="MeinLieblingsTeam">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- TITLE -->
   <title>BPD - PLAYERS</title>
 
-  <!-- IMPORT CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/navbar.css" rel="stylesheet">
   <link href="css/players.css" rel="stylesheet">
@@ -34,11 +31,11 @@
     </div>
   </nav>
 
-  <div class="btn-group btn-group-justified" role="group" aria-label="..." id="auswahlBtns">
-    <div class="btn-group" role="group">
+  <div class="btn-group btn-group-justified" id="auswahlBtns">
+    <div class="btn-group">
       <button type="button" class="btn btn-default" id="allPlayers" onclick="loadAllPlayers()">Alle Spieler</button>
     </div>
-    <div class="btn-group" role="group">
+    <div class="btn-group">
       <button type="button" class="btn btn-default" id="favPlayers" onclick="loadFavouritePlayers()">Favoriten</button>
     </div>
   </div>
@@ -57,31 +54,15 @@
       </thead>
     </table>
   </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
 
   <div id="spieler-tabelle">
-    <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
       <p>&copy; 2017 Mein Lieblingsteam &middot; <a href="http://s.quickmeme.com/img/a8/a8022006b463b5ed9be5a62f1bdbac43b4f3dbd5c6b3bb44707fe5f5e26635b0.jpg">Privacy</a> &middot; <a href="https://www.youtube.com/watch?v=GICX3XiYURY">Terms</a></p>
     </footer>
   </div>
-  <!-- /.container -->
 
-
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-  </script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/players.js"></script>
 
 </body>
-
 </html>

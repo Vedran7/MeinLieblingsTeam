@@ -12,10 +12,10 @@
   margin-right: auto;
 }
 
-.table>tbody>tr:nth-child(odd)>td {
+table>tbody>tr:nth-child(odd) {
     background-color: #FAFAFA;
 }
 
-.table>tbody>tr:nth-child(even)>td {
+table>tbody>tr:nth-child(even) {
     background-color: #F5F5F5;
 }

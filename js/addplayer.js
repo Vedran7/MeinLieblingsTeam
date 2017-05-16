@@ -18,6 +18,8 @@ function buchstabenPruefen(input) {
   return true;
 }
 
+
+
 $('#vorname').bind('input propertychange',
   function() {
     var vorname = document.getElementById('vorname').value;
@@ -109,14 +111,6 @@ $('#number').bind('input propertychange',
     checkAll();
   });
 
-function aktiv() {
-  var aktiv = document.getElementById('aktiv-1').checked;
-  if (aktiv) {
-    return true;
-  }
-  return false;
-}
-
 function checkAll() {
   if (vornameCorrect && nameCorrect && jahrCorrect && vereinCorrect && hcoachCorrect && acoachCorrect && numberCorrect) {
     document.getElementById("confirmation").className = "btn btn-warning btn-block";
@@ -131,7 +125,7 @@ function validateForm() {
     var vorname = document.getElementById('vorname').value;
     var name = document.getElementById('name').value;
     var jahr = document.getElementById('jahr').value;
-    var aktiv = aktiv();
+    var aktiv = isAktiv();
     var position = document.getElementById('position').value;
     var verein = document.getElementById('verein').value;
     var hcoach = document.getElementById('hcoach').value;
@@ -153,17 +147,27 @@ function validateForm() {
     formData.append('favorit', favorit);
 
 
-
+    clear();
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://188.166.165.74:13337/api/players', true);
-    xhr.onload = function(e) {
-
-
-    };
-
     xhr.send(formData);
+    console.log(formData);
   } else {
     alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
   }
+  return false;
+}
+
+function isAktiv() {
+  var aktiv = document.getElementById('aktiv-1').checked;
+  if (aktiv) {
+    return true;
+  }
+  return false;
+}
+
+function clear(){
+  document.getElementById('vorname').value = '';
+
 }
