@@ -18,8 +18,6 @@ function buchstabenPruefen(input) {
   return true;
 }
 
-
-
 $('#vorname').bind('input propertychange',
   function() {
     var vorname = document.getElementById('vorname').value;
@@ -146,13 +144,11 @@ function validateForm() {
     formData.append('number', number);
     formData.append('favorit', favorit);
 
-
-    clear();
-
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://188.166.165.74:13337/api/players', true);
     xhr.send(formData);
     console.log(formData);
+    clear();
   } else {
     alert("Einige Eingaben sind fehlerhaft. Bitte überprüfen Sie ihre Eingaben");
   }
@@ -169,5 +165,25 @@ function isAktiv() {
 
 function clear(){
   document.getElementById('vorname').value = '';
-
+  document.getElementById('name').value = '';
+  document.getElementById('jahr').value = '';
+  document.getElementById('verein').value = '';
+  document.getElementById('hcoach').value = '';
+  document.getElementById('acoach').value = '';
+  document.getElementById('number').value = '';
+  vornameCorrect = false;
+  nameCorrect = false;
+  jahrCorrect = false;
+  vereinCorrect = false;
+  hcoachCorrect = false;
+  acoachCorrect = false;
+  numberCorrect = false;
+  document.getElementById('vornameOutput').innerHTML = "&#10006;";
+  document.getElementById('nameOutput').innerHTML = "&#10006;";
+  document.getElementById('jahrOutput').innerHTML = "&#10006;";
+  document.getElementById('vereinOutput').innerHTML = "&#10006;";
+  document.getElementById('hcoachOutput').innerHTML = "&#10006;";
+  document.getElementById('acoachOutput').innerHTML = "&#10006;";
+  document.getElementById('numberOutput').innerHTML = "&#10006;";
+  checkAll();
 }
