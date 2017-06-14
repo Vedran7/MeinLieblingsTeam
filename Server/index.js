@@ -11,21 +11,26 @@ app.get('/api/players', function (req, res) {
    var data=fs.readFileSync('players.json');
    var players=JSON.parse(data);
 
-   var json;
+   var json = '[';
+   res.header('Content-Type', 'application/json');
 
    if (typeof fav != 'undefined' && fav == 'true') {
      for (var i = 0; i < players.length; i++) {
-       if (players[i].favorit == false) {
-         //players[i].splice(i,i);
-         //i--;
-         json.push(players[i]);
+       if (players[i].favorit == true) {
+         if (i!=0) {
+           json+=',';
+         }
+         json+=JSON.stringify(players[i]);
        }
      }
+     json+=']';
      console.log(json);
+     res.send(JSON.parse(json));
+
+   }else{
+      res.send(players);
    }
 
-   res.header('Content-Type', 'application/json');
-   res.send(players);
 })
 
 
