@@ -6,7 +6,8 @@ function loadAllPlayers(){
   document.getElementById('spieler-tabelle').innerHTML = "<table class='table'><thead><tr><th>Name</th><th>Verein</th><th>Coach</th><th>Position</th><th>Nummer</th><th>Jahr</th></tr></thead></table>";
   document.getElementById("allPlayers").className = "btn btn-default active";
   document.getElementById("favPlayers").className = "btn btn-default";
-  xhr.open('GET', ' http://188.166.165.74:13337/api/players');
+  //xhr.open('GET', ' http://188.166.165.74:13337/api/players');
+  xhr.open('GET', 'http://localhost:8081/api/players');
   xhr.responseType = 'json';
   xhr.addEventListener("readystatechange", processRequest, false);
   xhr.send();
@@ -16,7 +17,7 @@ function loadFavouritePlayers(){
   document.getElementById('spieler-tabelle').innerHTML = "<table class='table'><thead><tr><th>Name</th><th>Verein</th><th>Coach</th><th>Position</th><th>Nummer</th><th>Jahr</th></tr></thead></table>";
   document.getElementById("allPlayers").className = "btn btn-default";
   document.getElementById("favPlayers").className = "btn btn-default active";
-  xhr.open('GET', ' http://188.166.165.74:13337/api/players?favorites=true');
+  xhr.open('GET', 'http://localhost:8081/api/players?favorites=true');
   xhr.responseType = 'json';
   xhr.addEventListener("readystatechange", processRequest, false);
   xhr.send();
@@ -27,7 +28,8 @@ function processRequest() {
     var data = xhr.response;
 
     if (data !== null) {
-        console.log(data); // Parsed JSON object
+        console.log(data);
+        console.log(data.length);
 
         var html = "<table class='table'><thead><tr><th>Name</th><th>Verein</th><th>Coach</th><th>Position</th><th>Nummer</th><th>Jahr</th></tr></thead><tbody>";
 
