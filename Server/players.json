@@ -1,16 +1,5 @@
 [
     {
-      "_id": "571fd560b7ff36ca05e5cdb9",
-      "name": "Mays",
-      "vorname": "Watts",
-      "club": "ECRAZE",
-      "coach": "Martin Abbott",
-      "position": "Small Forward",
-      "number": 11,
-      "year": 1988,
-      "favorit": true
-    },
-    {
       "_id": 1,
       "name": "Testname1",
       "vorname": "Testvorname1",
@@ -100,10 +89,10 @@
     },
     {
       "_id": 9,
-      "name": "Testname8",
-      "vorname": "Testvorname8",
-      "club": "Testclub8",
-      "coach": "Testcoach8",
+      "name": "Testname9",
+      "vorname": "Testvorname9",
+      "club": "Testclub9",
+      "coach": "Testcoach9",
       "position": "Small Forward",
       "number": 11,
       "year": 1988,
@@ -111,7 +100,7 @@
     },
     {
       "_id": 10,
-      "name": "Testname9",
+      "name": "Testname10",
       "vorname": "Testvorname9",
       "club": "Testclub9",
       "coach": "Testcoach9",
