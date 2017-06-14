@@ -1,0 +1,233 @@
+[
+    {
+      "_id": "571fd560b7ff36ca05e5cdb9",
+      "name": "Mays",
+      "vorname": "Watts",
+      "club": "ECRAZE",
+      "coach": "Martin Abbott",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 1,
+      "name": "Testname1",
+      "vorname": "Testvorname1",
+      "club": "Testclub1",
+      "coach": "Testcoach1",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 2,
+      "name": "Testname2",
+      "vorname": "Testvorname2",
+      "club": "Testclub2",
+      "coach": "Testcoach2",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 3,
+      "name": "Testname3",
+      "vorname": "Testvorname3",
+      "club": "Testclub3",
+      "coach": "Testcoach3",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 4,
+      "name": "Testname4",
+      "vorname": "Testvorname4",
+      "club": "Testclub4",
+      "coach": "Testcoach4",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 5,
+      "name": "Testname5",
+      "vorname": "Testvorname5",
+      "club": "Testclub5",
+      "coach": "Testcoach5",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 6,
+      "name": "Testname6",
+      "vorname": "Testvorname6",
+      "club": "Testclub6",
+      "coach": "Testcoach6",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 7,
+      "name": "Testname7",
+      "vorname": "Testvorname7",
+      "club": "Testclub7",
+      "coach": "Testcoach7",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 8,
+      "name": "Testname8",
+      "vorname": "Testvorname8",
+      "club": "Testclub8",
+      "coach": "Testcoach8",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 9,
+      "name": "Testname8",
+      "vorname": "Testvorname8",
+      "club": "Testclub8",
+      "coach": "Testcoach8",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": true
+    },
+    {
+      "_id": 10,
+      "name": "Testname9",
+      "vorname": "Testvorname9",
+      "club": "Testclub9",
+      "coach": "Testcoach9",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 11,
+      "name": "Testname10",
+      "vorname": "Testvorname0",
+      "club": "Testclub10",
+      "coach": "Testcoach10",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 12,
+      "name": "Testname11",
+      "vorname": "Testvorname11",
+      "club": "Testclub11",
+      "coach": "Testcoach11",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 13,
+      "name": "Testname12",
+      "vorname": "Testvorname12",
+      "club": "Testclub12",
+      "coach": "Testcoach12",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 14,
+      "name": "Testname13",
+      "vorname": "Testvorname13",
+      "club": "Testclub13",
+      "coach": "Testcoach13",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 15,
+      "name": "Testname14",
+      "vorname": "Testvorname14",
+      "club": "Testclub14",
+      "coach": "Testcoach14",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 16,
+      "name": "Testname15",
+      "vorname": "Testvorname15",
+      "club": "Testclub15",
+      "coach": "Testcoach15",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 17,
+      "name": "Testname16",
+      "vorname": "Testvorname16",
+      "club": "Testclub16",
+      "coach": "Testcoach16",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 18,
+      "name": "Testname17",
+      "vorname": "Testvorname17",
+      "club": "Testclub17",
+      "coach": "Testcoach17",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 19,
+      "name": "Testname18",
+      "vorname": "Testvorname18",
+      "club": "Testclub18",
+      "coach": "Testcoach18",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    },
+    {
+      "_id": 20,
+      "name": "Testname19",
+      "vorname": "Testvorname19",
+      "club": "Testclub19",
+      "coach": "Testcoach19",
+      "position": "Small Forward",
+      "number": 11,
+      "year": 1988,
+      "favorit": false
+    }
+  ]
