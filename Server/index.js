@@ -14,21 +14,43 @@ app.get('/api/players', function (req, res) {
 
    res.header('Content-Type', 'application/json');
 
-   if (typeof fav != 'undefined' && fav == 'true') {
+   if (typeof fav !== 'undefined' && fav == 'true') {
       res.send(favorit(players));
-   }else if (typeof searchChar !='undefined') {
-      res.send(search(players,searchChar));
+   }else if (typeof searchChar !=='undefined') {
+      var buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      if (typeof searchChar !== 'string' || searchChar.length > 1 || buchstaben.indexOf(searchChar.charAt(0)) < 0) {
+        res.status(400).send('Wrong input');
+      }else{
+        console.log(search(players,searchChar).length);
+        res.send(search(players,searchChar));
+      }
    }else{
       res.send(players);
    }
+})
 
+app.post('/api/players', function (req, res) {
+   res.header('Content-Type','Application/Json');
+   var json = '[{"message":"Spieler wurde erfolgreich gespeichert"}]'
+   res.send(JSON.parse(json));
+})
+
+app.put('/api/players/:id', function (req, res) {
+   var id = req.params.id;
+   console.log(id);
+   res.header('Content-Type','Application/Json');
+   var json = '[{"message":"Spieler mit der ID '+ id +' wurde erfolgreich geupdatet"}]'
+   res.send(JSON.parse(json));
 })
 
 function favorit(players,res){
   var json = '[';
+  var first = true;
   for (var i = 0; i < players.length; i++) {
     if (players[i].favorit == true) {
-      if (i!=0) {
+      if (first) {
+        first = false;
+      }else{
         json+=',';
       }
       json+=JSON.stringify(players[i]);
@@ -39,8 +61,20 @@ function favorit(players,res){
 }
 
 function search(players,searchChar){
-  
-  res.status(404).send("Oh uh, something went wrong");
+  var json = '[';
+  var first = true;
+  for (var i = 0; i < players.length; i++){
+    if (players[i].name.indexOf(searchChar) == 0) {
+      if (first) {
+        first = false;
+      }else{
+        json+=',';
+      }
+      json+=JSON.stringify(players[i]);
+    }
+  }
+  json+=']';
+  return JSON.parse(json);
 }
 
 
