@@ -1,0 +1,28 @@
+.chateingabe{
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+
+}
+
+.chatfooter{
+  background-color: #fff;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
+}
+
+footer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#messages{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+  margin-top: 30px;
+}

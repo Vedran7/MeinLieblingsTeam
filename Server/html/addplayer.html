@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <!-- IMPORT META INFORMATION -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Basketball Player Database">
+  <meta name="keywords" content="Basketball, Basketball Player">
+  <meta name="author" content="MeinLieblingsTeam">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- TITLE -->
+  <title>BPD - ADD PLAYER</title>
+
+  <!-- IMPORT CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/addplayer.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <nav id="head">
+    <ul class="nav-buttons">
+      <li><a class="link" href="chat.html">CHAT</a></li>
+      <li><a class="link" href="players.html">PLAYERS</a></li>
+      <li><a class="active" href="#">ADD PLAYER</a></li>
+      <li><a class="link" href="home.html">HOME</a></li>
+    </ul>
+
+    <div id="color-overlay">
+      <h1 class="titel">Mein Lieblingsteam</h1>
+      <div class="dividerHeader"></div>
+      <h3 class="kleinerTitel">Basketball Player Database</h3>
+    </div>
+  </nav>
+
+  <div class="container form-horizontal" style="margin-top: 50px;">
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="vorname">Vorname</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="vorname" name="vorname" type="text" placeholder="Beispiel: Max" class="form-control input-md">
+            <span class="input-group-addon" id="vornameOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="name">Nachname</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="name" name="name" type="text" placeholder="Beispiel: Mustermann" class="form-control input-md">
+            <span class="input-group-addon" id="nameOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="jahr">Geburtsjahr</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="jahr" name="jahr" type="number" class="form-control input-md" min="0" max="2015" placeholder="Beispiel: 1990">
+            <span class="input-group-addon" id="jahrOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="aktiv">Aktiver Sportler?</label>
+          <div class="col-md-4">
+            <label class="radio-inline" for="aktiv-1">
+            <input type="radio" name="aktiv" id="aktiv-1" value="ja" checked="checked">Ja</label>
+            <label class="radio-inline" for="aktiv-0">
+            <input type="radio" name="aktiv" id="aktiv-0" value="nein">Nein</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="position">Position</label>
+          <div class="col-md-4 input-group input-group-md">
+            <select id="position" name="position" class="form-control">
+    				  <option value="Wing">Wing</option>
+    				  <option value="Center">Center</option>
+    				  <option value="Guard">Guard</option>
+    				  <option value="Power Forward">Power Forward</option>
+    				  <option value="Small Forward">Small Forward</option>
+  				  </select>
+            <span class="input-group-addon">&#10004;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="verein">Verein</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="verein" name="verein" type="text" placeholder="Beispiel: MLT" class="form-control input-md">
+            <span class="input-group-addon" id="vereinOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="hcoach">Headcoach</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="hcoach" name="hcoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
+            <span class="input-group-addon" id="hcoachOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="acoach">Assistant Coach</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="acoach" name="acoach" type="text" placeholder="Beispiel: Martina Kraus" class="form-control input-md">
+            <span class="input-group-addon" id="acoachOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="number">Rückennummer</label>
+          <div class="col-md-4 input-group input-group-md">
+            <input id="number" name="number" type="number" placeholder="Beispiel: 1337" class="form-control input-md" min="4" max="15">
+            <span class="input-group-addon" id="numberOutput">&#10006;</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="favorit">Als Favorit markieren?</label>
+          <div class="col-md-4">
+            <label class="checkbox-inline" for="favorit"><input type="checkbox" name="favorit" id="favorit" value="1">Ja</label>
+          </div>
+        </div>
+
+        <div class="form-group confButton">
+          <label class="col-md-4 control-label" for="confirmation"></label>
+          <div class="col-md-4 confButton">
+            <button id="confirmation" name="confirmation" class="btn btn-default btn-block disabled" onclick="validateForm()">Spieler erstellen</button>
+          </div>
+        </div>
+
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2017 Mein Lieblingsteam &middot; <a href="http://s.quickmeme.com/img/a8/a8022006b463b5ed9be5a62f1bdbac43b4f3dbd5c6b3bb44707fe5f5e26635b0.jpg">Privacy</a> &middot; <a href="https://www.youtube.com/watch?v=GICX3XiYURY">Terms</a></p>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/addplayer.js"></script>
+</body>
+
+</html>

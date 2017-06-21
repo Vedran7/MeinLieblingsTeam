@@ -1,0 +1,86 @@
+#head {
+  height: 270px;
+  width: 100%;
+  background: url(https://images7.alphacoders.com/363/363760.jpg);
+  background-size:cover;
+}
+
+#color-overlay {
+  background: rgba(230, 126, 34, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.titel {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 6vw;
+}
+
+.kleinerTitel{
+  color: rgba(255,255,255,0.7);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 3vw;
+  margin: 10px;
+}
+
+.dividerHeader{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 70%;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nav-buttons {
+  margin: 20px;
+}
+
+ul.nav-buttons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: inline;
+}
+
+li {
+    float: right;
+}
+
+a.active {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.2);
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+a.link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+a.link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+a {
+  color: inherit;
+}
+
+body{
+  background-color: #F5F5F5;
+}

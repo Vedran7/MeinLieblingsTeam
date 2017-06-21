@@ -1,28 +1,59 @@
 var express = require('express');
 var app = express();
-var cors = require('cors');
-app.use(cors());
+var players = require('./players.json');
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
+
+app.use('/css',express.static('css'));
+app.use('/js',express.static('js'));
+app.use(express.static('html'));
+
+
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+
+  socket.on('chat message', function(msg){
+      console.log('message: ' + msg);
+      io.emit('chat message', msg);
+  });
+
+
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+});
+
+http.listen(8081, function(){
+  var host = http.address().address
+  var port = http.address().port
+  console.log("Example app listening at http://%s:%s", host, port)
+});
+
+/*
+var server = app.listen(8081, function() {
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("Example app listening at http://%s:%s", host, port)
+})
+*/
 
 app.get('/api/players', function(req, res) {
   var fav = req.query.favorites;
   var searchChar = req.query.search;
 
-  var fs = require('fs');
-  var data = fs.readFileSync('players.json');
-  var players = JSON.parse(data);
-
   res.header('Content-Type', 'application/json');
 
   if (typeof fav !== 'undefined' && fav == 'true') {
-    res.send(favorit(players));
+    res.send(favorit());
   } else if (typeof searchChar !== 'undefined') {
     var buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (typeof searchChar !== 'string' || searchChar.length > 1 || buchstaben.indexOf(searchChar.charAt(0)) < 0) {
       res.status(400).send('Wrong input');
     } else {
-      console.log(search(players, searchChar).length);
-      res.send(search(players, searchChar));
+      res.send(search(searchChar));
     }
   } else {
     res.send(players);
@@ -65,7 +96,7 @@ app.put('/api/players/:id', function(req, res) {
   res.send(JSON.parse(json));
 })
 
-function favorit(players, res) {
+function favorit() {
   var json = '[';
   var first = true;
   for (var i = 0; i < players.length; i++) {
@@ -82,7 +113,7 @@ function favorit(players, res) {
   return JSON.parse(json);
 }
 
-function search(players, searchChar) {
+function search(searchChar) {
   var json = '[';
   var first = true;
   for (var i = 0; i < players.length; i++) {
@@ -98,13 +129,3 @@ function search(players, searchChar) {
   json += ']';
   return JSON.parse(json);
 }
-
-
-
-
-var server = app.listen(8081, function() {
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("Example app listening at http://%s:%s", host, port)
-})
